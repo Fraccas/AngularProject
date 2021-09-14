@@ -1,6 +1,5 @@
-<div class="minor-header">
-    <p *ngIf="!service.revenue.revenue_sum" style="margin:0">Current Weekly Prize: --</p>
-    <p *ngIf="service.revenue.revenue_sum" style="margin:0">Current Weekly Prize: ${{service.revenue.revenue_sum}}</p>
+<div class="minor-header" *ngIf="service.revenue.revenue_sum">
+    <p style="margin:0">Current Weekly Prize: ${{service.revenue.revenue_sum}}</p>
 </div>
 <div class="main-container">
     <div class="row">
