@@ -69,18 +69,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "PaymentApp:build"
+            "browserTarget": "CryptoIOApp:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "PaymentApp:build:production"
+              "browserTarget": "CryptoIOApp:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "PaymentApp:build"
+            "browserTarget": "CryptoIOApp:build"
           }
         },
         "test": {
@@ -117,16 +117,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "PaymentApp:serve"
+            "devServerTarget": "CryptoIOApp:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "PaymentApp:serve:production"
+              "devServerTarget": "CryptoIOApp:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "PaymentApp"
+  "defaultProject": "CryptoIOApp"
 }
