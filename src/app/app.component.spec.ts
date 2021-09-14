@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'PaymentApp'`, () => {
+  it(`should have as title 'CryptoIOApp'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('PaymentApp');
+    expect(app.title).toEqual('CryptoIOApp');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('PaymentApp app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('CryptoIOApp app is running!');
   });
 });
