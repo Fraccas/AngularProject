@@ -34,9 +34,9 @@ export class CryptoIOService {
   }
 
   getCurrentRevenue() {
-    let days = 300;
+    let days = 30;
     let start = new Date(new Date().setDate(new Date().getDate() - days)).toISOString().slice(0, 10);
-    let end = new Date().toISOString().slice(0, 10);
+    let end = new Date(new Date().setDate(new Date().getDate() - 1)).toISOString().slice(0, 10);
 
     this.http.get(`${this.baseURL}/${start}/${end}`)
     .toPromise()
