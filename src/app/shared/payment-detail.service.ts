@@ -12,8 +12,8 @@ export class CryptoIOService {
   constructor(private http:HttpClient) { }
 
   //formData:PaymentDetail = new PaymentDetail();
-  readonly baseAdsURL = 'http://localhost:5000/GetUnityAdRevenue';//'https://crypto-io-game-backend.herokuapp.com/GetUnityAdRevenue';
-  readonly baseLeaderboardURL = 'http://localhost:5000/Leaderboard';
+  readonly baseAdsURL = 'https://crypto-io-game-backend.herokuapp.com/GetUnityAdRevenue';//'http://localhost:5000/GetUnityAdRevenue';//;
+  readonly baseLeaderboardURL = 'https://crypto-io-game-backend.herokuapp.com/Leaderboard';//'http://localhost:5000/Leaderboard';
   leaderboardItemList : LeaderboardItem[];
   revenue : Revenue;
 
