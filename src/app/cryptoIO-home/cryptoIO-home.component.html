@@ -1,5 +1,8 @@
-<div class="minor-header" *ngIf="service.revenue.revenue_sum">
-    <p style="margin:0">Current Weekly Prize: ${{service.revenue.revenue_sum}}</p>
+<div class="minor-header" *ngIf="service.revenue">
+    <div style="margin:0">
+        <div>Current Weekly Prize: ${{service.revenue.revenue_sum}}</div>
+        <div style="font-size: 0.5em;">Ads Watched: {{service.revenue.view_count}}</div>
+    </div>
 </div>
 <div class="main-container">
     <div class="row">
@@ -57,29 +60,18 @@
             Leaderboard
         </h3>
         <table>
-            <tr>
+            <thead>
                 <th>Rank</th>
                 <th>Username</th>
                 <th>Wallet</th>
                 <th>High Score</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Jeff</td>
-                <td>e83d8328d8d80s3938d8838d9928xx8x93</td>
-                <td>1004</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Shitface</td>
-                <td>e2d8328dx80s393xd9928exrwf3</td>
-                <td>999</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Doobey</td>
-                <td>e83df28d8d80s3938838d9s8xx32</td>
-                <td>991</td>
+            </thead>
+            <ng-container></ng-container>
+            <tr *ngFor="let leadboardItem of service.leaderboardItemList let i = index" [attr.data-index]="i">
+                <td>{{(i+1)}}</td>
+                <td>{{leadboardItem.username}}</td>
+                <td>{{leadboardItem.wallet}}</td>
+                <td>{{leadboardItem.score}}</td>
             </tr>
         </table>
     </div>

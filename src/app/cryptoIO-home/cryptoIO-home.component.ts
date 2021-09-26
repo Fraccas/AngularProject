@@ -14,14 +14,15 @@ export class CryptoIOHomeComponent implements OnInit {
   constructor(public service : CryptoIOService, private toastr:ToastrService) { }
 
   ngOnInit(): void {
+    this.service.getLeaderboardItems();
     this.service.getCurrentRevenue();
   }
 
-  populateForm(selectedRecord:PaymentDetail) {
+  /*populateForm(selectedRecord:PaymentDetail) {
     this.service.formData = Object.assign({}, selectedRecord);
   }
 
-  onDelete(id:number) {
+  /*onDelete(id:number) {
     if (confirm('Are you sure you want to delete this record?')) {
       this.service.deletePaymentDetail(id)
       .subscribe(
@@ -32,5 +33,5 @@ export class CryptoIOHomeComponent implements OnInit {
         err => {console.log(err)}
       )
     }
-  }
+  }*/
 }
